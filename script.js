@@ -1,88 +1,57 @@
-// Typing Animation
+```javascript
+// Smooth scrolling for document navigation
 
-const typingElement = document.getElementById("typing");
+document.querySelectorAll(".document-nav a").forEach(link => {
 
-const words = [
-    "Student Developer",
-    "Programmer",
-    "Web Developer",
-    "Network Enthusiast",
-    "Cybersecurity Learner"
-];
+    link.addEventListener("click", function (event) {
 
-let wordIndex = 0;
-let letterIndex = 0;
-let deleting = false;
+        event.preventDefault();
 
-function typeEffect() {
+        const target = document.querySelector(
+            this.getAttribute("href")
+        );
 
-    const currentWord = words[wordIndex];
-
-    if (!deleting) {
-        typingElement.textContent =
-            currentWord.substring(0, letterIndex + 1);
-
-        letterIndex++;
-
-        if (letterIndex === currentWord.length) {
-            deleting = true;
-
-            setTimeout(typeEffect, 1500);
-            return;
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
         }
 
-    } else {
-
-        typingElement.textContent =
-            currentWord.substring(0, letterIndex - 1);
-
-        letterIndex--;
-
-        if (letterIndex === 0) {
-            deleting = false;
-
-            wordIndex++;
-
-            if (wordIndex === words.length) {
-                wordIndex = 0;
-            }
-        }
-    }
-
-    setTimeout(
-        typeEffect,
-        deleting ? 50 : 100
-    );
-}
-
-typeEffect();
-
-
-// Mobile Menu
-
-const menuButton = document.getElementById("menu-btn");
-const navLinks = document.querySelector(".nav-links");
-
-menuButton.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-
-
-// Close mobile menu when clicking a link
-
-document.querySelectorAll(".nav-links a").forEach(link => {
-
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
     });
 
 });
 
 
-// Current Year
+// Add active section effect while scrolling
 
-const footer = document.querySelector("footer");
+const sections = document.querySelectorAll(".document-section");
+const navLinks = document.querySelectorAll(".document-nav a");
 
-footer.innerHTML = `
-    <p>© ${new Date().getFullYear()} Stanley Bandao. Built with HTML, CSS & JavaScript.</p>
-`;
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+
+    });
+
+});
+```
+
+    
