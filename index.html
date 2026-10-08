@@ -1,1 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Stanley Bandao | Programmer Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(13, 17, 23, 0.95);
+            border-bottom: 1px solid #30363d;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #58a6ff;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: #c9d1d9;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #58a6ff;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .hero h1 span {
+            color: #58a6ff;
+        }
+
+        .hero h2 {
+            color: #8b949e;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            color: #8b949e;
+            font-size: 17px;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            margin: 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #238636;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2ea043;
+        }
+
+        .btn-secondary {
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+
+        .btn-secondary:hover {
+            border-color: #58a6ff;
+            color: #58a6ff;
+        }
+
+        /* GENERAL SECTIONS */
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .section-title {
+            font-size: 35px;
+            color: white;
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title span {
+            color: #58a6ff;
+        }
+
+        /* ABOUT */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 27px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            color: #8b949e;
+        }
+
+        .about-list {
+            list-style: none;
+        }
+
+        .about-list li {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+
+        /* SKILLS */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .skill-box {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .skill-box h3 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 8px 15px;
+            background: #21262d;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            color: #58a6ff;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 30px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: #58a6ff;
+        }
+
+        .project-card h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #8b949e;
+            margin-bottom: 15px;
+        }
+
+        .tech {
+            color: #58a6ff;
+            font-size: 14px;
+        }
+
+        /* GOALS */
+        .goals {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .goal {
+            background: #161b22;
+            border: 1px solid #30363d;
+            padding: 18px;
+            border-radius: 8px;
+        }
+
+        /* LEARNING */
+        .learning-box {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .progress-item {
+            margin-bottom: 25px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .progress-header span:last-child {
+            color: #58a6ff;
+        }
+
+        .progress {
+            width: 100%;
+            height: 10px;
+            background: #21262d;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #58a6ff;
+            border-radius: 10px;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            color: #8b949e;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #30363d;
+            color: #8b949e;
+        }
+
+        footer span {
+            color: #58a6ff;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .goals {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Stanley.dev</div>
+
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <h1>👋 Hi, I'm <span>Stanley Bandao</span></h1>
+
+            <h2>💻 Student Developer | Programmer | IT Enthusiast</h2>
+
+            <p>
+                I'm a student passionate about programming, software development,
+                networking, and cybersecurity. I enjoy learning new technologies,
+                building projects, and improving my programming skills.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="btn btn-primary">
+                    View My Projects
+                </a>
+
+                <a href="https://github.com/YOUR_USERNAME"
+                   target="_blank"
+                   class="btn btn-secondary">
+                    GitHub Profile
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+
+        <h2 class="section-title">
+            👨‍💻 About <span>Me</span>
+        </h2>
+
+        <div class="about">
+
+            <div class="about-text">
+
+                <h3>Student Developer</h3>
+
+                <p>
+                    I am an Information Technology student interested in
+                    software development, web development, networking,
+                    and cybersecurity.
+                </p>
+
+                <br>
+
+                <p>
+                    My goal is to continuously improve my technical skills
+                    by creating projects and gaining practical experience.
+                </p>
+
+            </div>
+
+            <ul class="about-list">
+
+                <li>🎓 Information Technology Student</li>
+                <li>💻 Programmer & System Developer</li>
+                <li>🌐 Web Development Enthusiast</li>
+                <li>📡 Networking Enthusiast</li>
+                <li>🔐 Cybersecurity Learner</li>
+                <li>🚀 Technology Enthusiast</li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+
+        <h2 class="section-title">
+            🛠️ Skills & <span>Technologies</span>
+        </h2>
+
+        <div class="skills-container">
+
+            <div class="skill-box">
+
+                <h3>Programming Languages</h3>
+
+                <div class="skills">
+                    <span class="skill">Java</span>
+                    <span class="skill">Python</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                </div>
+
+            </div>
+
+            <div class="skill-box">
+
+                <h3>Tools & Technologies</h3>
+
+                <div class="skills">
+                    <span class="skill">Git</span>
+                    <span class="skill">GitHub</span>
+                    <span class="skill">VS Code</span>
+                    <span class="skill">Linux</span>
+                    <span class="skill">Cisco</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects">
+
+        <h2 class="section-title">
+            🚀 Featured <span>Projects</span>
+        </h2>
+
+        <div class="projects">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+
+                <h3>🔐 RFID Vehicle Card Pass System</h3>
+
+                <p>
+                    A vehicle identification and access-control system
+                    that uses RFID cards to improve vehicle verification
+                    and campus security.
+                </p>
+
+                <div class="tech">
+                    RFID • Database • System Development
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+
+                <h3>🌐 Econet</h3>
+
+                <p>
+                    A Plastic Bottle-Based Free Internet Access System
+                    designed to provide free internet access while
+                    promoting plastic bottle recycling.
+                </p>
+
+                <div class="tech">
+                    Networking • Web Development • System Development
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+            <div class="project-card">
+
+                <h3>🔑 User Login System</h3>
+
+                <p>
+                    A login system designed for administrators,
+                    faculty, and students with authentication
+                    and access control.
+                </p>
+
+                <div class="tech">
+                    Authentication • Database • System Design
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GOALS SECTION -->
+    <section id="goals">
+
+        <h2 class="section-title">
+            🎯 Current <span>Goals</span>
+        </h2>
+
+        <div class="goals">
+
+            <div class="goal">📚 Improve my programming skills</div>
+            <div class="goal">💻 Build real-world projects</div>
+            <div class="goal">🌐 Learn modern web development</div>
+            <div class="goal">🔐 Improve cybersecurity knowledge</div>
+            <div class="goal">🌎 Build a strong developer portfolio</div>
+            <div class="goal">🚀 Contribute to open-source projects</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- LEARNING JOURNEY -->
+    <section>
+
+        <h2 class="section-title">
+            📈 My Learning <span>Journey</span>
+        </h2>
+
+        <div class="learning-box">
+
+            <div class="progress-item">
+
+                <div class="progress-header">
+                    <span>Programming</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:75%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-header">
+                    <span>Web Development</span>
+                    <span>60%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:60%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-header">
+                    <span>Networking</span>
+                    <span>65%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:65%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-header">
+                    <span>Cybersecurity</span>
+                    <span>50%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:50%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="progress-item">
+
+                <div class="progress-header">
+                    <span>Database</span>
+                    <span>55%</span>
+                </div>
+
+                <div class="progress">
+                    <div class="progress-bar" style="width:55%;"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+
+        <h2 class="section-title">
+            📫 Let's <span>Connect</span>
+        </h2>
+
+        <p>
+            Interested in my projects or want to connect with me?
+            Check out my GitHub profile.
+        </p>
+
+        <a
+            href="https://github.com/YOUR_USERNAME"
+            target="_blank"
+            class="btn btn-primary">
+            Visit My GitHub
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <span>Stanley Bandao</span>.
+            Built with HTML & CSS.
+        </p>
+
+        <p>
+            ⚡ Keep learning. Keep building. Keep improving.
+        </p>
+
+    </footer>
+
+</body>
+                  </html>
