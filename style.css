@@ -38,7 +38,7 @@ a {
   grid-template-columns: 340px minmax(0, 1fr);
 }
 
-/* LEFT PROFILE PANEL */
+/* PROFILE PANEL */
 
 .profile-panel {
   background: #e7f5ff;
@@ -655,7 +655,7 @@ h2 {
   }
 }
 
-/* ACCESSIBILITY */
+/* REDUCED MOTION ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -668,4 +668,4 @@ h2 {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
   }
-    }
+}
