@@ -1,1 +1,23 @@
 
+/* Profile photo — keeps the original portfolio design */
+.profile-header {
+  text-align: center;
+  position: relative;
+}
+
+.profile-photo {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 18px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  outline: 2px solid #b9e2fa;
+  box-shadow: 0 8px 24px rgba(57, 151, 220, 0.12);
+}
+
+.profile-header h1 {
+  margin-top: 0;
+}
