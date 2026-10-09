@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -30,7 +31,7 @@
       <div class="portrait-wrap">
         <img
           class="portrait"
-          src="assets/profile.jpg"
+          src="IMG_20261009_091352_095.jpg"
           alt="Stanley Bandao"
           onerror="this.style.display='none'; document.getElementById('portraitFallback').style.display='grid';"
         >
@@ -51,6 +52,7 @@
           <span class="fact-label">FOCUS</span>
           <span>Information Technology</span>
         </div>
+
         <div>
           <span class="fact-label">BASED IN</span>
           <span>Nueva Vizcaya, Philippines</span>
@@ -66,7 +68,8 @@
       </nav>
 
       <div class="profile-footer">
-        <a href="https://github.com/YOUR_USERNAME" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/YOUR_USERNAME"
+           target="_blank" rel="noopener noreferrer">
           GitHub ↗
         </a>
         <span>© 2026 Stanley Bandao</span>
@@ -74,7 +77,7 @@
 
     </aside>
 
-    <!-- RIGHT SCROLLABLE DOCUMENT -->
+    <!-- MAIN CONTENT -->
     <main class="document">
 
       <header class="document-header">
@@ -135,7 +138,7 @@
 
             <p>
               A vehicle identification and access-control system
-              concept that uses RFID cards to support vehicle
+              concept using RFID cards to support vehicle
               verification and campus security.
             </p>
 
@@ -196,8 +199,8 @@
         </article>
 
         <p class="small-note">
-          Add repository links or live demos to your projects when
-          they are ready to share.
+          Add repository links or live demos to your projects
+          when they are ready to share.
         </p>
 
       </section>
@@ -312,18 +315,17 @@
         </p>
 
         <div class="contact-actions">
-          <a
-            class="primary-button"
-            href="https://github.com/YOUR_USERNAME"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+          <a class="primary-button"
+             href="https://github.com/YOUR_USERNAME"
+             target="_blank" rel="noopener noreferrer">
             Visit my GitHub ↗
           </a>
 
           <button class="secondary-button" id="copyEmail" type="button">
             Copy email
           </button>
+
         </div>
 
         <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
@@ -338,6 +340,5 @@
     </main>
   </div>
 
-  <script src="script.js"></script>
 </body>
-  </html>
+</html>
