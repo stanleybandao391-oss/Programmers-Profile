@@ -4,404 +4,341 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#eaf6ff">
+  <meta name="description" content="Stanley Bandao — Student Developer, Programmer, and IT Enthusiast.">
 
   <title>Stanley Bandao | Portfolio</title>
 
-  <meta name="description"
-        content="Stanley Bandao's personal portfolio showcasing programming projects, IT skills, and learning journey.">
-
-  <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-  <div class="portfolio">
+  <div class="site-shell">
 
     <!-- LEFT PROFILE PANEL -->
     <aside class="profile-panel">
 
-      <div class="profile-image">
-        <img
-          src="IMG_20261009_091352_095.jpg"
-          alt="Stanley Bandao profile picture"
-        >
+      <div class="profile-topline">
+        <span class="status-dot"></span>
+        PORTFOLIO / 2026
       </div>
 
-      <p class="eyebrow">PERSONAL PORTFOLIO</p>
+      <div class="portrait-wrap">
+        <img
+          class="portrait"
+          src="IMG_20261009_091352_095.jpg"
+          alt="Stanley Bandao"
+          onerror="this.style.display='none'; document.getElementById('portraitFallback').style.display='grid';"
+        >
+        <div class="portrait-fallback" id="portraitFallback">SB</div>
+      </div>
 
-      <h1>Stanley<br>Bandao<span>.</span></h1>
+      <p class="eyebrow">HELLO, I'M</p>
 
-      <p class="profile-description">
-        Student Developer · IT Enthusiast
+      <h1>Stanley<br><span>Bandao.</span></h1>
+
+      <p class="intro">
+        Student developer building my skills in software,
+        networking, and cybersecurity.
       </p>
 
-      <p class="profile-intro">
-        I am an IT student passionate about programming,
-        software development, networking, and cybersecurity.
-        I enjoy learning new technologies and building
-        useful digital solutions.
-      </p>
-
-      <div class="profile-details">
-        <div class="detail">
-          <span class="detail-label">LOCATION</span>
-          <span>Philippines</span>
-        </div>
-
-        <div class="detail">
-          <span class="detail-label">FIELD</span>
+      <div class="quick-facts">
+        <div>
+          <span class="fact-label">FOCUS</span>
           <span>Information Technology</span>
         </div>
 
-        <div class="detail">
-          <span class="detail-label">STATUS</span>
-          <span class="status">
-            <span class="status-dot"></span>
-            Learning and Building
-          </span>
+        <div>
+          <span class="fact-label">BASED IN</span>
+          <span>Nueva Vizcaya, Philippines</span>
         </div>
       </div>
 
-      <a
-        class="github-button"
-        href="https://github.com/stanleybandao391-oss"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Visit My GitHub <span>↗</span>
-      </a>
-
-      <nav class="side-nav" aria-label="Main navigation">
-        <a href="#about" class="nav-link active">01. About Me</a>
-        <a href="#projects" class="nav-link">02. Projects</a>
-        <a href="#skills" class="nav-link">03. Skills</a>
-        <a href="#journey" class="nav-link">04. My Journey</a>
-        <a href="#contact" class="nav-link">05. Contact</a>
+      <nav class="side-nav" aria-label="Portfolio navigation">
+        <a class="nav-link active" href="#about"><span>01</span> About</a>
+        <a class="nav-link" href="#projects"><span>02</span> Projects</a>
+        <a class="nav-link" href="#skills"><span>03</span> Skills</a>
+        <a class="nav-link" href="#journey"><span>04</span> Learning Journey</a>
+        <a class="nav-link" href="#contact"><span>05</span> Contact</a>
       </nav>
 
-      <p class="sidebar-footer">
-        Designed and built by Stanley.
-      </p>
+      <div class="profile-footer">
+        <a href="https://github.com/YOUR_USERNAME"
+           target="_blank" rel="noopener noreferrer">
+          GitHub ↗
+        </a>
+        <span>© 2026 Stanley Bandao</span>
+      </div>
 
     </aside>
 
-    <!-- RIGHT SCROLLABLE CONTENT -->
-    <main class="content-panel">
+    <!-- MAIN CONTENT -->
+    <main class="document">
+
+      <header class="document-header">
+        <div>
+          <span class="mini-mark"></span>
+          PERSONAL PORTFOLIO
+        </div>
+        <a class="text-link" href="#contact">Let's connect ↗</a>
+      </header>
 
       <!-- ABOUT -->
-      <section id="about" class="content-section">
+      <section class="section hero-section" id="about">
 
-        <div class="section-heading">
-          <span class="section-number">01 / INTRODUCTION</span>
-          <span class="heading-line"></span>
-        </div>
+        <p class="section-kicker">01 / ABOUT ME</p>
 
         <h2>
-          Hello, I'm Stanley.<br>
-          <span class="blue-text">I build and learn.</span>
+          Curious by nature.<br>
+          <span class="blue-text">Building one project at a time.</span>
         </h2>
 
         <p class="lead">
-          A student developer exploring the world of technology,
-          one project at a time.
+          I'm an IT student who enjoys turning ideas into practical
+          systems. I'm learning through hands-on projects, exploring
+          new tools, and strengthening the fundamentals behind the
+          technology we use every day.
         </p>
 
-        <p class="body-text">
-          I am an Information Technology student who enjoys
-          understanding how software and computer systems work.
-          My interests include programming, web development,
-          networking, and cybersecurity.
-        </p>
-
-        <p class="body-text">
-          I believe that the best way to improve my skills is
-          through continuous learning and hands-on experience.
-          Every project gives me an opportunity to solve problems,
-          discover new ideas, and become a better developer.
-        </p>
-
-        <div class="quote-card">
-          <span class="quote-mark">“</span>
+        <div class="note-card">
+          <div class="note-line"></div>
           <p>
-            Learning today, building tomorrow, and improving
-            every step of the way.
+            My current interests include
+            <strong>software development, web technologies,
+            networking, and cybersecurity.</strong>
+            I'm focused on learning consistently and creating
+            projects that solve real problems.
           </p>
         </div>
 
       </section>
 
       <!-- PROJECTS -->
-      <section id="projects" class="content-section">
+      <section class="section" id="projects">
 
         <div class="section-heading">
-          <span class="section-number">02 / SELECTED WORK</span>
-          <span class="heading-line"></span>
+          <div>
+            <p class="section-kicker">02 / SELECTED WORK</p>
+            <h2>Projects &amp; experiments</h2>
+          </div>
+          <span class="muted-count">03 PROJECTS</span>
         </div>
 
-        <h2>Projects<span class="blue-text">.</span></h2>
+        <article class="project-card">
+          <div class="project-number">01</div>
 
-        <p class="section-description">
-          Some of the system concepts and projects I have explored
-          during my IT learning journey.
-        </p>
-
-        <div class="project-list">
-
-          <article class="project-card">
-            <div class="project-top">
-              <span class="project-index">PROJECT 01</span>
-              <span class="project-symbol">01</span>
-            </div>
-
+          <div class="project-content">
+            <div class="project-meta">SYSTEM DEVELOPMENT · SECURITY</div>
             <h3>RFID Vehicle Card Pass System</h3>
 
             <p>
-              A system concept that uses RFID cards to identify
-              vehicles and help manage vehicle entry and exit.
-              It explores how identification technology can
-              support access control.
+              A vehicle identification and access-control system
+              concept using RFID cards to support vehicle
+              verification and campus security.
             </p>
 
-            <div class="tag-list">
+            <div class="tags">
               <span>RFID</span>
-              <span>Automation</span>
+              <span>Database</span>
               <span>Access Control</span>
             </div>
-          </article>
+          </div>
 
-          <article class="project-card">
-            <div class="project-top">
-              <span class="project-index">PROJECT 02</span>
-              <span class="project-symbol">02</span>
-            </div>
+          <span class="project-arrow">↗</span>
+        </article>
 
+        <article class="project-card">
+          <div class="project-number">02</div>
+
+          <div class="project-content">
+            <div class="project-meta">NETWORKING · SUSTAINABILITY</div>
             <h3>Econet</h3>
 
             <p>
-              An environmental technology concept that explores
-              using plastic bottles as part of a system intended
-              to provide free internet access. It combines
-              sustainability, innovation, and connectivity.
+              A plastic bottle-based free internet access concept
+              designed to connect recycling incentives with
+              digital access.
             </p>
 
-            <div class="tag-list">
-              <span>Innovation</span>
-              <span>Connectivity</span>
-              <span>Sustainability</span>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-top">
-              <span class="project-index">PROJECT 03</span>
-              <span class="project-symbol">03</span>
-            </div>
-
-            <h3>User Login & Role Access System</h3>
-
-            <p>
-              A system concept with login authentication and
-              role-based access for Students, Faculty, and
-              Administrators. Each user role has different
-              permissions based on its responsibilities.
-            </p>
-
-            <div class="tag-list">
-              <span>Authentication</span>
-              <span>RBAC</span>
+            <div class="tags">
+              <span>Networking</span>
+              <span>Web Development</span>
               <span>System Design</span>
             </div>
-          </article>
+          </div>
 
-        </div>
+          <span class="project-arrow">↗</span>
+        </article>
 
-        <a
-          class="text-link"
-          href="https://github.com/stanleybandao391-oss"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Explore my GitHub account <span>↗</span>
-        </a>
+        <article class="project-card">
+          <div class="project-number">03</div>
+
+          <div class="project-content">
+            <div class="project-meta">AUTHENTICATION · DATABASE</div>
+            <h3>User Login &amp; Role Access System</h3>
+
+            <p>
+              A login system concept with different permissions
+              for administrators, faculty, and students to organize
+              access according to user roles.
+            </p>
+
+            <div class="tags">
+              <span>Authentication</span>
+              <span>Database</span>
+              <span>RBAC</span>
+            </div>
+          </div>
+
+          <span class="project-arrow">↗</span>
+        </article>
+
+        <p class="small-note">
+          Add repository links or live demos to your projects
+          when they are ready to share.
+        </p>
 
       </section>
 
       <!-- SKILLS -->
-      <section id="skills" class="content-section">
+      <section class="section" id="skills">
 
         <div class="section-heading">
-          <span class="section-number">03 / TOOLKIT</span>
-          <span class="heading-line"></span>
+          <div>
+            <p class="section-kicker">03 / TOOLKIT</p>
+            <h2>Skills &amp; technologies</h2>
+          </div>
         </div>
-
-        <h2>Skills & Technologies<span class="blue-text">.</span></h2>
 
         <p class="section-description">
-          Technologies and tools I have studied or used in
-          coursework and personal projects. My experience
-          continues to grow through practice.
+          Tools I'm learning and using as I grow my foundation in IT.
         </p>
 
-        <div class="skill-group">
-          <h3>Programming & Web Development</h3>
+        <div class="skill-groups">
 
-          <div class="skill-list">
-            <span>Java</span>
-            <span>Python</span>
-            <span>JavaScript</span>
-            <span>HTML</span>
-            <span>CSS</span>
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <div class="skill-list">
+              <span>Java</span>
+              <span>Python</span>
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+            </div>
           </div>
-        </div>
 
-        <div class="skill-group">
-          <h3>Tools & Platforms</h3>
-
-          <div class="skill-list">
-            <span>Git</span>
-            <span>GitHub</span>
-            <span>Visual Studio Code</span>
-            <span>Linux</span>
+          <div class="skill-group">
+            <h3>Tools &amp; platforms</h3>
+            <div class="skill-list">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+              <span>Linux</span>
+              <span>Cisco</span>
+            </div>
           </div>
-        </div>
 
-        <div class="skill-group">
-          <h3>IT Knowledge</h3>
-
-          <div class="skill-list">
-            <span>Computer Networking</span>
-            <span>Cybersecurity Fundamentals</span>
-            <span>Database Fundamentals</span>
-            <span>System Analysis</span>
-            <span>Software Engineering</span>
+          <div class="skill-group">
+            <h3>Areas of interest</h3>
+            <div class="skill-list">
+              <span>Web Development</span>
+              <span>Networking</span>
+              <span>Cybersecurity</span>
+              <span>Databases</span>
+              <span>System Design</span>
+            </div>
           </div>
-        </div>
 
+        </div>
       </section>
 
-      <!-- JOURNEY -->
-      <section id="journey" class="content-section">
+      <!-- LEARNING JOURNEY -->
+      <section class="section" id="journey">
 
-        <div class="section-heading">
-          <span class="section-number">04 / GROWTH</span>
-          <span class="heading-line"></span>
-        </div>
+        <p class="section-kicker">04 / WHAT'S NEXT</p>
+        <h2>Learning in progress.</h2>
 
-        <h2>My Learning Journey<span class="blue-text">.</span></h2>
-
-        <p class="body-text">
-          My journey in Information Technology is about more
-          than writing code. I am learning how to analyze
-          problems, design systems, work with computer networks,
-          and understand how technology can help people.
+        <p class="section-description journey-copy">
+          I'm working toward stronger programming fundamentals,
+          more complete real-world projects, modern web development
+          skills, and a deeper understanding of network and
+          application security.
         </p>
 
-        <div class="journey-item">
-          <div class="journey-marker"></div>
-          <div>
-            <span class="journey-label">CURRENT FOCUS</span>
-            <h3>Programming & Web Development</h3>
-            <p>
-              Improving my coding fundamentals and learning
-              to create clean, responsive websites and useful
-              applications.
-            </p>
-          </div>
-        </div>
+        <div class="goal-list">
 
-        <div class="journey-item">
-          <div class="journey-marker"></div>
           <div>
-            <span class="journey-label">EXPLORING</span>
-            <h3>Networking & Cybersecurity</h3>
-            <p>
-              Understanding network configurations, operating
-              systems, security fundamentals, and how computers
-              communicate.
-            </p>
+            <span>01</span>
+            <p>Build and publish practical projects</p>
+            <span class="goal-status">IN PROGRESS</span>
           </div>
-        </div>
 
-        <div class="journey-item">
-          <div class="journey-marker"></div>
           <div>
-            <span class="journey-label">FUTURE GOAL</span>
-            <h3>Become a Skilled IT Professional</h3>
-            <p>
-              Build practical projects, strengthen my technical
-              knowledge, and develop solutions that make a
-              meaningful difference.
-            </p>
+            <span>02</span>
+            <p>Strengthen web development skills</p>
+            <span class="goal-status">IN PROGRESS</span>
           </div>
-        </div>
 
+          <div>
+            <span>03</span>
+            <p>Learn more about cybersecurity</p>
+            <span class="goal-status">IN PROGRESS</span>
+          </div>
+
+          <div>
+            <span>04</span>
+            <p>Contribute to open-source projects</p>
+            <span class="goal-status">UP NEXT</span>
+          </div>
+
+        </div>
       </section>
 
       <!-- CONTACT -->
-      <section id="contact" class="content-section contact-section">
+      <section class="section contact-section" id="contact">
 
-        <div class="section-heading">
-          <span class="section-number">05 / GET IN TOUCH</span>
-          <span class="heading-line"></span>
-        </div>
+        <p class="section-kicker">05 / CONTACT</p>
 
-        <h2>Let's connect<span class="blue-text">.</span></h2>
+        <h2>
+          Have an idea?<br>
+          <span class="blue-text">Let's talk.</span>
+        </h2>
 
-        <p class="body-text">
-          I'm always interested in learning, sharing ideas,
-          and connecting with people who enjoy technology.
-          Feel free to visit my GitHub to see my work.
+        <p class="section-description">
+          I'm open to connecting with fellow students, developers,
+          and people who enjoy building useful things with technology.
         </p>
 
-        <div class="contact-card">
-          <div>
-            <span class="contact-label">GITHUB ACCOUNT</span>
-            <p>stanleybandao391-oss</p>
-          </div>
+        <div class="contact-actions">
 
-          <a
-            href="https://github.com/stanleybandao391-oss"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="contact-link"
-          >
-            Open Profile ↗
+          <a class="primary-button"
+             href="https://github.com/YOUR_USERNAME"
+             target="_blank" rel="noopener noreferrer">
+            Visit my GitHub ↗
           </a>
-        </div>
 
-        <div class="contact-card">
-          <div>
-            <span class="contact-label">EMAIL</span>
-            <p id="email-address">your.email@example.com</p>
-          </div>
-
-          <button
-            type="button"
-            class="copy-button"
-            id="copy-email"
-          >
-            Copy Email
+          <button class="secondary-button" id="copyEmail" type="button">
+            Copy email
           </button>
+
         </div>
 
-        <footer class="page-footer">
-          <p>© <span id="year"></span> Stanley Bandao</p>
-          <p>Built with HTML, CSS & JavaScript.</p>
-        </footer>
+        <p class="copy-feedback" id="copyFeedback" aria-live="polite"></p>
 
       </section>
 
+      <footer class="document-footer">
+        <span>DESIGNED &amp; BUILT WITH HTML, CSS &amp; JS</span>
+        <a href="#about">BACK TO TOP ↑</a>
+      </footer>
+
     </main>
-
   </div>
-
-  <script src="script.js"></script>
 
 </body>
 </html>
